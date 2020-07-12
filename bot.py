@@ -46,10 +46,10 @@ def down(msg):
             video = result
         
         for i in video['formats']:
-            link = '<a href=\"' + i['url'] + '\">' + 'Video' + '</a>'
+            link = '<a href=\"' + i['url'] + '\">' + 'link' + '</a>'
 
             if i.get('format_note'):
-                bot.reply_to(msg, i['format_note'] + ': ' + link, parse_mode='HTML')
+                bot.reply_to(msg, 'Quality- ' + i['format_note'] + ': ' + link, parse_mode='HTML')
             else:
                 bot.reply_to(msg, link, parse_mode='HTML', disable_notification=True)
     except:
